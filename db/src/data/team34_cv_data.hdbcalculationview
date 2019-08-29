@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="team34_cv_data" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" outputViewType="Aggregation" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="team34_cv_data"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="team34_data">
+    <resourceUri>team34_data</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews/>
+<logicalModel id="team34_data">
+  <attributes>
+    <attribute id="id" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="machine ID"/>
+      <keyMapping columnObjectName="team34_data" columnName="id"/>
+    </attribute>
+    <attribute id="cicle" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="cicle"/>
+      <keyMapping columnObjectName="team34_data" columnName="cicle"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures>
+    <measure id="time" order="2" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="time stamp"/>
+      <measureMapping columnObjectName="team34_data" columnName="time"/>
+    </measure>
+    <measure id="pressure_left" order="4" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="pressure_left"/>
+      <measureMapping columnObjectName="team34_data" columnName="pressure_left"/>
+    </measure>
+    <measure id="pressure_right" order="5" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="pressure_right"/>
+      <measureMapping columnObjectName="team34_data" columnName="pressure_right"/>
+    </measure>
+    <measure id="water_flow" order="6" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="water_flow"/>
+      <measureMapping columnObjectName="team34_data" columnName="water_flow"/>
+    </measure>
+    <measure id="temperature_room" order="7" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="temperature_room"/>
+      <measureMapping columnObjectName="team34_data" columnName="temperature_room"/>
+    </measure>
+    <measure id="temperature_mold" order="8" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="temperature_mold"/>
+      <measureMapping columnObjectName="team34_data" columnName="temperature_mold"/>
+    </measure>
+    <measure id="temperature_in" order="9" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="temperature_in"/>
+      <measureMapping columnObjectName="team34_data" columnName="temperature_in"/>
+    </measure>
+    <measure id="temperature_out" order="10" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="temperature_out"/>
+      <measureMapping columnObjectName="team34_data" columnName="temperature_out"/>
+    </measure>
+  </baseMeasures>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+  <localDimensions/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>
