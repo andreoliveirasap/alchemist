@@ -1,0 +1,14 @@
+column table "team34_data" 
+(
+	"id" NVARCHAR(512) COMMENT 'machine ID',
+	"time" INTEGER COMMENT 'time stamp',	
+	"cicle" NVARCHAR(512) COMMENT 'cicle',
+	"pressure_left" FLOAT,
+	"pressure_right" FLOAT,
+	"water_flow" FLOAT,
+	"temperature_room" FLOAT,
+	"temperature_mold" FLOAT,	
+	"temperature_in" FLOAT,
+	"temperature_out" FLOAT,
+	PRIMARY KEY ("id","time")
+)
